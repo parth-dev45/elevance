@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevance AI Enterprise Customer Support Platform</title>
+  <meta name="description" content="Next-Generation Enterprise AI Support Platform featuring Multilingual Sentiment Escalations, SLA Management, CI/CD Knowledge Pipeline, Temporal RAG, Multimodal OCR, and Session Isolation.">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Top Glass Header -->
+  <header>
+    <div class="logo-group">
+      <div class="logo-badge">E</div>
+      <div>
+        <div class="brand-title">Elevance Enterprise Support AI</div>
+        <div class="brand-subtitle">Autonomous Multilingual Customer Experience Platform</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="tab-chat">💬 Live Chat & Sentiment</button>
+      <button class="tab-btn" data-tab="tab-tickets">🎫 Tickets & Dynamic SLA</button>
+      <button class="tab-btn" data-tab="tab-kb">📚 KB Pipeline & CI/CD</button>
+      <button class="tab-btn" data-tab="tab-ocr">🔍 Multimodal OCR Lab</button>
+      <button class="tab-btn" data-tab="tab-timemachine">⏱️ Virtual Time & Metrics</button>
+    </nav>
+
+    <!-- System Status Badges -->
+    <div class="top-nav-status">
+      <div class="status-pill">
+        <div id="biz-hours-dot" class="pulse-dot"></div>
+        <span id="biz-hours-label">Business Hours</span>
+      </div>
+      <div class="status-pill" style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;">
+        <span id="system-clock-display">Loading clock...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="dashboard-container">
+
+    <!-- TAB 1: LIVE CHAT & SENTIMENT -->
+    <section id="tab-chat" class="tab-content active">
+      <div class="grid-2">
+        <!-- Chat Panel -->
+        <div class="card chat-container">
+          <div class="card-header">
+            <div class="card-title">💬 Autonomous Conversational Support</div>
+            <div style="display: flex; gap: 8px;">
+              <select id="role-selector" class="btn-secondary" style="font-size: 0.75rem;">
+                <option value="customer">Role: Customer</option>
+                <option value="agent">Role: Support Agent</option>
+                <option value="admin">Role: Administrator</option>
+              </select>
+              <select id="tier-selector" class="btn-secondary" style="font-size: 0.75rem;">
+                <option value="standard">Tier: Standard</option>
+                <option value="premium">Tier: Premium</option>
+                <option value="enterprise">Tier: Enterprise (VIP)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Messages -->
+          <div id="chat-messages" class="chat-messages">
+            <div class="chat-bubble assistant">
+              <div>Hello! Welcome to Elevance Enterprise Customer Care. How can I assist you today with your orders, policies, or technical troubleshooting?</div>
+              <div class="meta"><span class="chat-meta-badge">System Ready</span></div>
+            </div>
+          </div>
+
+          <!-- Input Bar -->
+          <div class="chat-input-bar">
+            <input type="text" id="chat-input" class="input-field" placeholder="Type your message in English, Hindi, Spanish, French, or Hinglish..." onkeydown="if(event.key==='Enter') sendMessage()">
+            <button class="btn-primary" onclick="sendMessage()">Send</button>
+          </div>
+
+          <!-- Quick Test Presets -->
+          <div class="preset-pills">
+            <span style="font-size: 0.75rem; color: var(--text-dim); display: flex; align-items: center; margin-right: 4px;">Quick Test Scenarios:</span>
+            <button class="preset-chip" onclick="sendPreset('sarcasm')">🎭 Sarcastic Complaint</button>
+            <button class="preset-chip" onclick="sendPreset('calm_risk')">⚖️ Calm Legal Threat</button>
+            <button class="preset-chip" onclick="sendPreset('duplicate')">💳 Duplicate Payment</button>
+            <button class="preset-chip" onclick="sendPreset('hinglish')">🇮🇳 Hinglish Code-Switch</button>
+            <button class="preset-chip" onclick="sendPreset('injection')">🛡️ Prompt Injection Attack</button>
+            <button class="preset-chip" onclick="sendPreset('unresolved')">⏳ Unresolved Complaint (>15m)</button>
+          </div>
+        </div>
+
+        <!-- Capability Overview Panel -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">⚡ Real-Time Engine Highlights</div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <h4 style="color: var(--primary-light); font-size: 0.95rem; margin-bottom: 6px;">Multilingual Sentiment & Tone Modulation</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Detects Positive, Neutral, Negative, Frustrated, Urgent, and Sarcastic sentiments. Employs incongruity heuristics to catch deceptive sarcasm. Modulates tone (empathetic, apologetic, direct) without altering business policy figures.
+              </p>
+            </div>
+
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <h4 style="color: #06b6d4; font-size: 0.95rem; margin-bottom: 6px;">Temporal RAG & Mandatory Citations</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Indexes documents with effective/expiry dates, versioning, and access tiers. Resolves conflicting versions by picking the latest applicable policy, verifies historical dates, and appends explicit source citations.
+              </p>
+            </div>
+
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <h4 style="color: var(--success); font-size: 0.95rem; margin-bottom: 6px;">Automated Ticket & SLA Engine</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Calculates business-hour deadlines strictly excluding weekends and holidays. Emits automated warnings at 75% time consumption, breaches and escalates at 100%, and generates masked handoff summaries with PII protection.
+              </p>
+            </div>
+
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <h4 style="color: var(--warning); font-size: 0.95rem; margin-bottom: 6px;">Session Isolation & Continuity</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Retains 10+ turn conversational memory. Times out after 30 minutes of inactivity, and restores prior context summary if returning within 24 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: TICKETS & SLA MANAGEMENT -->
+    <section id="tab-tickets" class="tab-content">
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <div class="card-title">🎫 Live Ticket Triage & Dynamic Routing Queue</div>
+          <button class="btn-secondary" onclick="loadTickets()">🔄 Refresh Queue</button>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="ticket-table">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Customer / Order</th>
+                <th>Issue Summary</th>
+                <th>Priority</th>
+                <th>SLA Consumption</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tickets-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Runtime SLA Modification Tool -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">⚙️ Runtime SLA Policy Modification Engine</div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+          Simulate runtime SLA configuration changes. Modifying allowed business hours triggers automatic deadline recalculation and status re-evaluation for all open tickets.
+        </p>
+
+        <div style="display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap;">
+          <div>
+            <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 6px;">Priority Tier</label>
+            <select id="sla-tier-select" class="btn-secondary" style="padding: 10px 16px;">
+              <option value="CRITICAL">CRITICAL (Default: 2.0h)</option>
+              <option value="HIGH">HIGH (Default: 4.0h)</option>
+              <option value="MEDIUM">MEDIUM (Default: 8.0h)</option>
+              <option value="LOW">LOW (Default: 24.0h)</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 6px;">New Allowed Business Hours</label>
+            <input type="number" id="sla-hours-input" class="input-field" style="width: 220px;" placeholder="e.g. 1.0 or 4.0" step="0.5" min="0.5">
+          </div>
+          <button class="btn-primary" style="height: 48px;" onclick="updateRuntimeSLA()">Apply Runtime SLA Change</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: KB PIPELINE & CI/CD -->
+    <section id="tab-kb" class="tab-content">
+      <div class="grid-2">
+        <!-- CI/CD Controls & Quality Gate -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📚 Knowledge Base CI/CD Lifecycle</div>
+            <span class="tag tag-medium" id="kb-version-badge">v1.0</span>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+            <div class="status-pill">
+              <div id="maint-window-dot" class="pulse-dot"></div>
+              <span id="maint-window-status">Maintenance Window Status</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <button class="btn-secondary" style="justify-content: center;" onclick="runKBQualityCheck()">🧪 Run Automated Pre-Activation Quality Gate</button>
+            <div id="quality-check-result" style="display: none; padding: 12px; border-radius: var(--radius-sm); font-size: 0.85rem;"></div>
+
+            <button class="btn-primary" style="justify-content: center;" onclick="publishKBUpdates()">🚀 Publish Staged Updates (Maintenance Window Gatekeeper)</button>
+
+            <button class="btn-secondary" style="justify-content: center; border-color: rgba(239,68,68,0.4);" onclick="rollbackKB()">⏪ Rollback to Snapshot Version</button>
+
+            <button class="btn-secondary" style="justify-content: center; border-color: rgba(245,158,11,0.4);" onclick="simulateCanaryFailure()">🐤 Simulate 5-Min Canary Health Failure (Auto-Rollback)</button>
+          </div>
+        </div>
+
+        <!-- Staged Documents Panel -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📑 Staged Document Updates</div>
+            <span class="tag tag-low" id="staged-docs-count">0 Staged</span>
+          </div>
+          <div id="staged-docs-list" style="max-height: 400px; overflow-y: auto;">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MULTIMODAL OCR LAB -->
+    <section id="tab-ocr" class="tab-content">
+      <div class="grid-2">
+        <!-- File Upload & Simulator Form -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🔍 Document & Invoice Analysis Lab</div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+            Upload invoices, receipts, screenshots, or PDFs. The OCR engine extracts critical invoice fields and cross-validates them against the customer's claims.
+          </p>
+
+          <form onsubmit="handleFileUpload(event)" style="display: flex; flex-direction: column; gap: 16px;">
+            <div>
+              <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 6px;">Select Invoice or Screenshot (PNG, JPG, PDF)</label>
+              <input type="file" id="ocr-file-input" class="input-field" style="padding: 10px;" accept=".png,.jpg,.jpeg,.webp,.pdf">
+            </div>
+
+            <div>
+              <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 6px;">Customer Claim Message (for Discrepancy Cross-Check)</label>
+              <input type="text" id="ocr-customer-msg" class="input-field" placeholder="e.g. I was charged $450 for order ORD-1111" value="I was charged $450 for order ORD-1111">
+            </div>
+
+            <div>
+              <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 6px;">Simulated Processing Duration (Seconds)</label>
+              <input type="number" id="ocr-delay-input" class="input-field" value="2.0" step="1" min="1">
+              <span style="font-size: 0.72rem; color: var(--text-dim);">Set > 30s to trigger background queue offloading!</span>
+            </div>
+
+            <button type="submit" class="btn-primary" style="height: 48px; justify-content: center;">Run Multimodal OCR Analysis</button>
+          </form>
+
+          <div id="ocr-loading" style="display: none; text-align: center; margin-top: 16px; color: var(--primary-light);">
+            Extracting text and running cross-validation...
+          </div>
+        </div>
+
+        <!-- Extraction & Cross Validation Results -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📊 Cross-Validation & Evidence Audit</div>
+          </div>
+          <div id="ocr-result-card" style="display: none;">
+            <!-- Populated via JS -->
+          </div>
+          <div id="ocr-placeholder" style="color: var(--text-dim); font-size: 0.85rem; padding: 24px; text-align: center;">
+            Upload a document on the left to view extracted fields, discrepancy detection, and file retention status.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: VIRTUAL TIME MACHINE & METRICS -->
+    <section id="tab-timemachine" class="tab-content">
+      <div class="grid-2">
+        <!-- Virtual Time Controls -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">⏱️ Virtual Clock & Time-Travel Simulator</div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+            Simulate evaluation scenarios including after-hours routing, weekend/holiday SLA calculations, 15-minute negative conversation escalation, and 24-hour session expiry.
+          </p>
+
+          <div class="time-box">
+            <div>
+              <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Active Clock Time</div>
+              <div id="virtual-clock-text" class="time-display" style="font-size: 1.1rem; margin-top: 4px;">Loading...</div>
+            </div>
+            <button class="btn-secondary" onclick="resetTime()">Reset to Real Clock</button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; gap: 10px;">
+              <button class="btn-secondary" style="flex: 1;" onclick="advanceTime(15)">⏩ Advance +15 Min (Unresolved Negative SLA)</button>
+              <button class="btn-secondary" style="flex: 1;" onclick="advanceTime(0, 4)">⏩ Advance +4 Hours (SLA 75% / Breach)</button>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <button class="btn-secondary" style="flex: 1;" onclick="advanceTime(0, 12)">🌙 Jump to Night / After-Hours</button>
+              <button class="btn-secondary" style="flex: 1;" onclick="advanceTime(0, 25)">🗓️ Advance +25 Hours (Session Expiry)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Observability Telemetry Stats -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📈 System Observability & Telemetry</div>
+          </div>
+
+          <div class="grid-2" style="margin-bottom: 20px;">
+            <div class="metric-stat" style="background: rgba(15,23,42,0.5); padding: 14px; border-radius: var(--radius-md);">
+              <div class="metric-num" id="metric-total-reqs">0</div>
+              <div class="metric-label">Total Requests</div>
+            </div>
+            <div class="metric-stat" style="background: rgba(15,23,42,0.5); padding: 14px; border-radius: var(--radius-md);">
+              <div class="metric-num" id="metric-avg-latency">0ms</div>
+              <div class="metric-label">Avg Latency</div>
+            </div>
+            <div class="metric-stat" style="background: rgba(15,23,42,0.5); padding: 14px; border-radius: var(--radius-md);">
+              <div class="metric-num" id="metric-escalations" style="color: #f87171;">0</div>
+              <div class="metric-label">Escalations</div>
+            </div>
+            <div class="metric-stat" style="background: rgba(15,23,42,0.5); padding: 14px; border-radius: var(--radius-md);">
+              <div class="metric-num" id="metric-error-rate">0%</div>
+              <div class="metric-label">Error Rate</div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--text-dim);">
+            Active telemetry logging PII-masked traces, latencies, confidence metrics, and escalation conditions in real-time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
