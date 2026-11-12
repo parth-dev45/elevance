@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "dataset_name": "Elevance Structured Support Tickets & SLA Matrix",
+    "business_hours": "09:00 - 18:00 (Mon - Fri)",
+    "sla_tiers_hours": {
+      "CRITICAL": 2.0,
+      "HIGH": 4.0,
+      "MEDIUM": 8.0,
+      "LOW": 24.0
+    }
+  },
+  "holidays_calendar_2024": [
+    {
+      "date": "2024-01-01",
+      "name": "New Year's Day"
+    },
+    {
+      "date": "2024-01-26",
+      "name": "Republic Day"
+    },
+    {
+      "date": "2024-03-25",
+      "name": "Holi"
+    },
+    {
+      "date": "2024-08-15",
+      "name": "Independence Day"
+    },
+    {
+      "date": "2024-10-02",
+      "name": "Gandhi Jayanti"
+    },
+    {
+      "date": "2024-11-01",
+      "name": "Diwali"
+    },
+    {
+      "date": "2024-12-25",
+      "name": "Christmas Day"
+    }
+  ],
+  "tickets": [
+    {
+      "ticket_id": "TCK-1001",
+      "customer": "Sarah Jenkins",
+      "order_id": "ORD-88219",
+      "product": "AeroWireless Pro Headset",
+      "issue": "Hardware failure and duplicate charge of $149.99 on Visa card",
+      "contact_email": "s***h@example.com",
+      "contact_phone": "+1-555-***-0192",
+      "severity": 9,
+      "sentiment_score": 0.85,
+      "waiting_minutes": 45,
+      "customer_impact": 9,
+      "priority_score": 86.5,
+      "priority_tier": "CRITICAL",
+      "assigned_agent": "Alex Vance (Skill: billing_and_hardware)",
+      "sla_allowed_hours": 2.0,
+      "sla_consumed_percent": 79.2,
+      "status": "WARNING_75",
+      "is_duplicate": false,
+      "master_ticket_id": null
+    },
+    {
+      "ticket_id": "TCK-1002",
+      "customer": "Rajesh Kumar",
+      "order_id": "ORD-9912",
+      "product": "Elevance UltraBook Pro 15",
+      "issue": "Shipment delayed for 4 days, refund pending status",
+      "contact_email": "r***h@example.com",
+      "contact_phone": "+91-98***-**321",
+      "severity": 7,
+      "sentiment_score": 0.94,
+      "waiting_minutes": 90,
+      "customer_impact": 8,
+      "priority_score": 78.0,
+      "priority_tier": "HIGH",
+      "assigned_agent": "Priya Sharma (Skill: logistics_and_refunds)",
+      "sla_allowed_hours": 4.0,
+      "sla_consumed_percent": 62.5,
+      "status": "IN_PROGRESS",
+      "is_duplicate": false,
+      "master_ticket_id": null
+    },
+    {
+      "ticket_id": "TCK-1003",
+      "customer": "David Miller",
+      "order_id": "ORD-7712",
+      "product": "Noise-Cancelling Earbuds",
+      "issue": "Left earbud stopped charging after 2 days",
+      "contact_email": "d***d@example.com",
+      "contact_phone": "+1-555-***-8821",
+      "severity": 5,
+      "sentiment_score": 0.4,
+      "waiting_minutes": 20,
+      "customer_impact": 4,
+      "priority_score": 45.0,
+      "priority_tier": "MEDIUM",
+      "assigned_agent": "Carlos Ortiz (Skill: hardware_repairs)",
+      "sla_allowed_hours": 8.0,
+      "sla_consumed_percent": 25.0,
+      "status": "IN_PROGRESS",
+      "is_duplicate": false,
+      "master_ticket_id": null
+    }
+  ]
+}

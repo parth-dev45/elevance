@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "dataset_name": "Elevance Multilingual Sentiment & Escalation Corpus",
+    "version": "2.0",
+    "languages": [
+      "en",
+      "hi",
+      "es",
+      "fr",
+      "de",
+      "hinglish"
+    ],
+    "labels": [
+      "positive",
+      "neutral",
+      "negative",
+      "frustrated",
+      "urgent",
+      "sarcastic",
+      "calm_high_risk"
+    ]
+  },
+  "samples": [
+    {
+      "id": "MSG-001",
+      "language": "en",
+      "text": "Oh wonderful, another 4-day delay on order #ORD-9912! Absolutely top-notch service...",
+      "sentiment": "negative",
+      "is_sarcastic": true,
+      "is_frustrated": true,
+      "confidence": 0.96,
+      "escalation_required": true,
+      "escalation_reason": "High sarcasm + customer frustration on delayed order"
+    },
+    {
+      "id": "MSG-002",
+      "language": "en",
+      "text": "Good morning. Please be advised that I have consulted my attorney and we will be filing a lawsuit regarding the unauthorized debit.",
+      "sentiment": "negative",
+      "is_sarcastic": false,
+      "is_frustrated": false,
+      "is_calm_high_risk": true,
+      "confidence": 0.98,
+      "escalation_required": true,
+      "escalation_reason": "Calm legal threat / lawsuit declaration"
+    },
+    {
+      "id": "MSG-003",
+      "language": "hinglish",
+      "text": "Mera refund abhi tak kyu nahi aaya for order #ORD-9912? Amount deduct ho gaya but status still pending dikha raha hai.",
+      "sentiment": "negative",
+      "is_sarcastic": false,
+      "is_frustrated": true,
+      "confidence": 0.92,
+      "escalation_required": false,
+      "escalation_reason": null
+    },
+    {
+      "id": "MSG-004",
+      "language": "hi",
+      "text": "नमस्ते, मुझे अपना ऑर्डर ORD-4412 ट्रैक करना है। क्या आप डिलीवरी की तारीख बता सकते हैं?",
+      "sentiment": "neutral",
+      "is_sarcastic": false,
+      "is_frustrated": false,
+      "confidence": 0.95,
+      "escalation_required": false,
+      "escalation_reason": null
+    },
+    {
+      "id": "MSG-005",
+      "language": "es",
+      "text": "¡Excelente! El producto llegó un día antes de lo previsto y en perfectas condiciones. ¡Muchas gracias!",
+      "sentiment": "positive",
+      "is_sarcastic": false,
+      "is_frustrated": false,
+      "confidence": 0.99,
+      "escalation_required": false,
+      "escalation_reason": null
+    },
+    {
+      "id": "MSG-006",
+      "language": "fr",
+      "text": "Mon compte semble compromis, je vois des achats non autorisés depuis ce matin!",
+      "sentiment": "urgent",
+      "is_sarcastic": false,
+      "is_frustrated": true,
+      "is_calm_high_risk": true,
+      "confidence": 0.97,
+      "escalation_required": true,
+      "escalation_reason": "High-risk account compromise alert"
+    },
+    {
+      "id": "MSG-007",
+      "language": "de",
+      "text": "Ich habe die doppelte Abrechnung für Bestellung ORD-8812 auf meiner Kreditkarte festgestellt. Bitte stornieren.",
+      "sentiment": "urgent",
+      "is_sarcastic": false,
+      "is_frustrated": true,
+      "is_calm_high_risk": true,
+      "confidence": 0.95,
+      "escalation_required": true,
+      "escalation_reason": "High-risk duplicate billing dispute"
+    }
+  ]
+}

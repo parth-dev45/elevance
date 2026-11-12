@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "dataset_name": "Elevance Hinglish Transliteration & Multi-Turn Session Corpus",
+    "session_inactivity_timeout_minutes": 30,
+    "summary_restoration_window_hours": 24,
+    "min_context_turns": 10
+  },
+  "hinglish_transliteration_lexicon": {
+    "nahi aaya": "did not arrive",
+    "paise kat gaye": "amount deducted",
+    "kharab hai": "defective / damaged",
+    "chalu nahi ho raha": "not turning on",
+    "kripya refund karein": "please process refund",
+    "kab tak aayega": "when will it arrive",
+    "dusra bhejo": "send replacement",
+    "order cancel karo": "cancel order"
+  },
+  "multiturn_sessions": [
+    {
+      "session_id": "SESS-2024-001",
+      "customer_id": "CUST-9921",
+      "turns": [
+        {
+          "turn": 1,
+          "speaker": "user",
+          "text": "Hi, I ordered headphones under order ORD-3312 yesterday.",
+          "language": "en"
+        },
+        {
+          "turn": 2,
+          "speaker": "assistant",
+          "text": "Hello! I have noted order ORD-3312. How can I help you with it today?",
+          "language": "en"
+        },
+        {
+          "turn": 3,
+          "speaker": "user",
+          "text": "Payment kat gaya lekin status pending dikha raha hai, please check karo.",
+          "language": "hinglish"
+        },
+        {
+          "turn": 4,
+          "speaker": "assistant",
+          "text": "Maine order ORD-3312 ka payment status check kiya hai. Payment capture ho chuka hai aur order jald dispatch hoga.",
+          "language": "hinglish"
+        },
+        {
+          "turn": 5,
+          "speaker": "user",
+          "text": "Actually sorry, typo ho gaya: order ORD-3315 hai, not 3312.",
+          "language": "hinglish"
+        },
+        {
+          "turn": 6,
+          "speaker": "assistant",
+          "text": "No worries! Updated active reference to ORD-3315. Fetching details for ORD-3315 now.",
+          "language": "en"
+        }
+      ],
+      "entity_state": {
+        "customer_name": "Parth Biradar",
+        "order_id": "ORD-3315",
+        "product_type": "Headphones",
+        "payment_verified": true
+      }
+    }
+  ]
+}

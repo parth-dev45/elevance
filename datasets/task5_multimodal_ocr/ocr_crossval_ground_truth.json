@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "dataset_name": "Elevance Multimodal OCR & Cross-Validation Benchmark",
+    "retention_period_hours": 72,
+    "max_sync_duration_seconds": 30
+  },
+  "test_cases": [
+    {
+      "file": "sample_invoice_ORD1111.png",
+      "extracted_order_id": "ORD-1111",
+      "extracted_date": "2024-11-08",
+      "extracted_amount": 350.0,
+      "extracted_error_code": "ERR-NONE",
+      "is_low_quality": false,
+      "customer_claim_text": "I was charged $450 for order ORD-1111",
+      "cross_validation_has_conflict": true,
+      "discrepancy_details": "Customer claimed $450 != Invoice extracted $350.00",
+      "expected_clarification": "Thank you for providing the invoice for order #ORD-1111. Our records and the uploaded document show a charge of $350.00, rather than $450. Could you please clarify if there was an additional fee charged?"
+    }
+  ]
+}

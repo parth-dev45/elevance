@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "dataset_name": "Elevance Temporal RAG Policy Store with RBAC",
+    "access_levels": [
+      "standard",
+      "premium",
+      "enterprise",
+      "agent",
+      "admin"
+    ]
+  },
+  "policies": [
+    {
+      "policy_id": "POL-ELEC-V2.1",
+      "product_category": "Electronics & Laptops",
+      "region": "GLOBAL",
+      "version": "v2.1",
+      "access_level": "standard",
+      "effective_date": "2023-11-01",
+      "expiry_date": "2024-05-31",
+      "status": "EXPIRED_HISTORICAL",
+      "summary": "Eligible for 30-day replacement window with free return shipping. A 15% restocking fee applies if opened.",
+      "source_citation": "docs/policies/hardware_warranty_v2.1.md#L45-L58"
+    },
+    {
+      "policy_id": "POL-ELEC-V3.0",
+      "product_category": "Electronics & Laptops",
+      "region": "GLOBAL",
+      "version": "v3.0",
+      "access_level": "standard",
+      "effective_date": "2024-06-01",
+      "expiry_date": "2025-12-31",
+      "status": "CURRENT_ACTIVE",
+      "summary": "Eligible for 45-day replacement window with zero restocking fee. Instant refund on courier pickup.",
+      "source_citation": "docs/policies/hardware_warranty_v3.0.md#L12-L30"
+    },
+    {
+      "policy_id": "POL-ENT-VIP-V1.0",
+      "product_category": "Enterprise Cloud & Hardware",
+      "region": "NORTH_AMERICA",
+      "version": "v1.0",
+      "access_level": "enterprise",
+      "effective_date": "2024-01-01",
+      "expiry_date": "2026-12-31",
+      "status": "CURRENT_ACTIVE",
+      "summary": "Dedicated 24/7 account manager, 1-hour SLA on critical hardware replacement with on-site technician.",
+      "source_citation": "docs/policies/enterprise_vip_terms_v1.0.md#L1-L24"
+    }
+  ],
+  "temporal_eval_benchmark": [
+    {
+      "query": "What is the return window for an UltraBook bought on 2024-03-15?",
+      "transaction_date": "2024-03-15",
+      "expected_version": "v2.1",
+      "expected_window_days": 30,
+      "expected_citation": "docs/policies/hardware_warranty_v2.1.md#L45-L58"
+    },
+    {
+      "query": "What is the return window for an UltraBook bought today?",
+      "transaction_date": "2024-11-12",
+      "expected_version": "v3.0",
+      "expected_window_days": 45,
+      "expected_citation": "docs/policies/hardware_warranty_v3.0.md#L12-L30"
+    }
+  ]
+}
