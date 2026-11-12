@@ -102,8 +102,14 @@ Elevance-project/
 
 ---
 
-## 📋 Formal Internship Report & Demo Video
-- **Internship Report**: The complete internship report containing all nine mandatory sections (**Introduction, Background, Learning Objectives, Activities and Tasks, Skills and Competencies, Feedback and Evidence, Challenges and Solutions, Outcomes and Impact, Conclusion**) is located at:
-  👉 **[`docs/INTERNSHIP_REPORT.md`](file:///Users/parthbiradar/ACE/Elevance-project/docs/INTERNSHIP_REPORT.md)**
-- **Demo Video Walkthrough**: 3-minute 51-second Full HD MP4 presentation with audio walkthrough:
-  👉 **[`demo_walkthrough.mp4`](file:///Users/parthbiradar/ACE/Elevance-project/demo_walkthrough.mp4)**
+## 📋 Formal Internship Deliverables
+- **Official Internship Report (PDF & Markdown)**:
+  - 📄 **[`docs/INTERNSHIP_REPORT.pdf`](file:///Users/parthbiradar/ACE/Elevance-project/docs/INTERNSHIP_REPORT.pdf)** (Print-ready formatted A4 PDF)
+  - 📝 **[`docs/INTERNSHIP_REPORT.md`](file:///Users/parthbiradar/ACE/Elevance-project/docs/INTERNSHIP_REPORT.md)** (Full 9-section Markdown report)
+  - 🌐 **[`docs/INTERNSHIP_REPORT.html`](file:///Users/parthbiradar/ACE/Elevance-project/docs/INTERNSHIP_REPORT.html)** (Interactive HTML report)
+- **Live Website Walkthrough Video**:
+  - 🎥 **[`demo_walkthrough.mp4`](file:///Users/parthbiradar/ACE/Elevance-project/demo_walkthrough.mp4)** (Full HD 1080p video recording of the live running web application with spoken voiceover)
+- **Production Datasets & Evaluation Benchmarks**:
+  - 📦 **[`datasets_elevance_support_ai.zip`](file:///Users/parthbiradar/ACE/Elevance-project/datasets_elevance_support_ai.zip)** (Complete zip archive of all datasets across tasks 1 to 6)
+  - 🗂️ **[`datasets/`](file:///Users/parthbiradar/ACE/Elevance-project/datasets/)** (Directory containing JSON corpora, policy manifests, holiday calendars, and sample OCR documents)
+

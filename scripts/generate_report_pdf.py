@@ -195,3 +195,4 @@ cmd = [
 ]
 subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
 print(f"Generated PDF report at: {PDF_PATH}")
+
