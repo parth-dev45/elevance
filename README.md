@@ -102,6 +102,8 @@ Elevance-project/
 
 ---
 
-## 📋 Formal Internship Report
-The complete internship report containing all nine mandatory sections (**Introduction, Background, Learning Objectives, Activities and Tasks, Skills and Competencies, Feedback and Evidence, Challenges and Solutions, Outcomes and Impact, Conclusion**) is located at:
-👉 **[`docs/INTERNSHIP_REPORT.md`](file:///Users/parthbiradar/ACE/Elevance-project/docs/INTERNSHIP_REPORT.md)**
+## 📋 Formal Internship Report & Demo Video
+- **Internship Report**: The complete internship report containing all nine mandatory sections (**Introduction, Background, Learning Objectives, Activities and Tasks, Skills and Competencies, Feedback and Evidence, Challenges and Solutions, Outcomes and Impact, Conclusion**) is located at:
+  👉 **[`docs/INTERNSHIP_REPORT.md`](file:///Users/parthbiradar/ACE/Elevance-project/docs/INTERNSHIP_REPORT.md)**
+- **Demo Video Walkthrough**: 3-minute 51-second Full HD MP4 presentation with audio walkthrough:
+  👉 **[`demo_walkthrough.mp4`](file:///Users/parthbiradar/ACE/Elevance-project/demo_walkthrough.mp4)**
